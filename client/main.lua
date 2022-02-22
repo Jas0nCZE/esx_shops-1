@@ -120,7 +120,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
---3DTEXT Draw --JSN nesahej cokle
+--3DTEXT Draw 
 
 function DrawText3Ds(x,y,z, text)
 	local onScreen, _x, _y = World3dToScreen2d(x, y, z)
