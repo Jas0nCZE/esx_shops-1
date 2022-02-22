@@ -11,10 +11,15 @@ MySQL.ready(function()
 					ShopItems[shopResult[i].store] = {}
 				end
 
+				if shopResult[i].limit == -1 then
+					shopResult[i].limit = 30
+				end
+
 				table.insert(ShopItems[shopResult[i].store], {
 					label = shopResult[i].label,
 					item  = shopResult[i].item,
 					price = shopResult[i].price,
+					limit = shopResult[i].limit
 				})
 			else
 				print(('esx_shops: invalid item "%s" found!'):format(shopResult[i].item))
@@ -31,6 +36,7 @@ RegisterServerEvent('esx_shops:buyItem')
 AddEventHandler('esx_shops:buyItem', function(itemName, amount, zone)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
+	local sourceItem = xPlayer.getInventoryItem(itemName)
 
 	amount = ESX.Math.Round(amount)
 
