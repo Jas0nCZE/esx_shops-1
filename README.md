@@ -1,8 +1,9 @@
 # esx_shops
 
 ## Download & Installation
+## JUST EDIT!!!!!!!!       ESX_LEGACY SHOPS WORKING WITH ESX_INVENTORYHUD
 
-### Using [fvm](https://github.com/qlaffont/fvm-installer)
+## INVENTORY https://github.com/Trsak/esx_inventoryhud
 ```
 fvm install --save --folder=esx esx-org/esx_shops
 ```
